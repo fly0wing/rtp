@@ -59,4 +59,13 @@ public class FizzBuzzTest {
         assertEquals("FizzBuzz", result);
     }
 
+    @Test
+    public void given_45_return_FizzBuzz() throws Exception {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+
+        String result = fizzBuzz.process(45);
+
+        assertEquals("FizzBuzz", result);
+    }
+
 }
