@@ -1,6 +1,7 @@
 package com.jd.jr.adapter02;
 
 
+import com.jd.jr.adapter02.adapter.FanAdapter;
 import com.jd.jr.adapter02.adapter.LightAdapter;
 import com.jd.jr.adapter02.equipment.Door;
 import com.jd.jr.adapter02.equipment.Fan;
@@ -35,7 +36,7 @@ public class HouseKeeperTest {
     public void should_turn_on_fan_when_master_arrive_at_home() throws Exception {
         Fan fan = new Fan();
         HouseKeeper houseKeeper = new HouseKeeper();
-        houseKeeper.addFan(fan);
+        houseKeeper.addSwitchable(new FanAdapter(fan));
         houseKeeper.masterArriveAtHome();
 
         assertTrue(fan.isRunning());
