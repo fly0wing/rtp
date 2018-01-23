@@ -1,3 +1,6 @@
+package com.jd.jr.adapter01;
+
+import com.jd.jr.adapter01.*;
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertFalse;

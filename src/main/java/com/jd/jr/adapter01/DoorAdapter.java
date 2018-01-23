@@ -1,3 +1,5 @@
+package com.jd.jr.adapter01;
+
 public class DoorAdapter implements Switchable {
     private Door door;
 

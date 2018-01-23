@@ -1,3 +1,5 @@
+package com.jd.jr.adapter01;
+
 public class LightAdapter implements Switchable {
     Light light;
 

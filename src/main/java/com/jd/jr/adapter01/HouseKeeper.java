@@ -1,3 +1,5 @@
+package com.jd.jr.adapter01;
+
 import java.util.ArrayList;
 import java.util.List;
 
