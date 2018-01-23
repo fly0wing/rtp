@@ -21,4 +21,10 @@ public class HouseKeeper {
             light.turnOn();
         }
     }
+
+    public void masterLeftHome() {
+        for (Light light : lights) {
+            light.turnOff();
+        }
+    }
 }
