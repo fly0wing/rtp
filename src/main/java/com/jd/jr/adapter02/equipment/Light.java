@@ -1,0 +1,17 @@
+package com.jd.jr.adapter02.equipment;
+
+public class Light {
+    private boolean isOn;
+
+    public void turnOn() {
+        this.isOn = true;
+    }
+
+    public void turnOff() {
+        this.isOn = false;
+    }
+
+    public boolean isOn() {
+        return isOn;
+    }
+}
