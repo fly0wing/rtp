@@ -12,12 +12,13 @@ package com.jd.jr.fizzbuzz;
  */
 public class FizzBuzz {
     public String process(int i) {
+        String result = "";
         if (i % 3 == 0) {
-            return "Fizz";
+            result = "Fizz";
         }
         if (i % 5 == 0) {
-            return "Buzz";
+            result += "Buzz";
         }
-        return null;
+        return result;
     }
 }
