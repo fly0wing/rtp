@@ -12,16 +12,18 @@ package com.jd.jr.fizzbuzz;
  */
 public class FizzBuzz {
     public String process(int i) {
-        String result = "";
+        StringBuilder result = new StringBuilder();
         if (i % 3 == 0) {
-            result = "Fizz";
+            result.append("Fizz");
         }
         if (i % 5 == 0) {
-            result += "Buzz";
+            result.append("Buzz");
         }
-        if (result.equals("")) {
+
+        if (result.length() == 0) {
             return String.valueOf(i);
+        } else {
+            return result.toString();
         }
-        return result;
     }
 }
