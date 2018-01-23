@@ -14,7 +14,6 @@ import java.util.Set;
  */
 public class HouseKeeper {
     private Set<Switchable> switchables = new HashSet<Switchable>();
-    private Set<Light> lights = new HashSet<Light>();
     private Set<Fan> fans = new HashSet<Fan>();
     private Set<Door> doors = new HashSet<Door>();
 
@@ -22,9 +21,6 @@ public class HouseKeeper {
     public void masterArriveAtHome() {
         for (Switchable switchable : switchables) {
             switchable.turnOn();
-        }
-        for (Light light : lights) {
-            light.turnOn();
         }
         for (Fan fan : fans) {
             fan.turnTo(1);
@@ -39,9 +35,6 @@ public class HouseKeeper {
         for (Switchable switchable : switchables) {
             switchable.turnOff();
         }
-        for (Light light : lights) {
-            light.turnOff();
-        }
         for (Fan fan : fans) {
             fan.turnTo(0);
         }
@@ -54,9 +47,6 @@ public class HouseKeeper {
         fans.add(fan);
     }
 
-    public void addLight(Light light) {
-        lights.add(light);
-    }
 
     public void addDoor(Door door) {
         doors.add(door);

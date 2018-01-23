@@ -25,7 +25,7 @@ public class HouseKeeperTest {
     public void should_turn_off_light_when_master_left_home() throws Exception {
         Light light = new Light();
         HouseKeeper houseKeeper = new HouseKeeper();
-        houseKeeper.addLight(light);
+        houseKeeper.addSwitchable(new LightAdapter(light));
         houseKeeper.masterLeftHome();
 
         assertFalse(light.isOn());
