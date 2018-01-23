@@ -19,6 +19,9 @@ public class FizzBuzz {
         if (i % 5 == 0) {
             result += "Buzz";
         }
+        if (result.equals("")) {
+            return String.valueOf(i);
+        }
         return result;
     }
 }
