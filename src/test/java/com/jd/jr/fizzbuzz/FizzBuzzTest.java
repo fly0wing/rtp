@@ -12,8 +12,22 @@ public class FizzBuzzTest {
 
     @Test
     public void given_3_return_Fizz() throws Exception {
+        // given
         FizzBuzz fizzBuzz = new FizzBuzz();
+
+        // when
         String result = fizzBuzz.process(3);
+
+        // then
         assertEquals("Fizz", result);
+    }
+
+    @Test
+    public void given_5_return_Buzz() throws Exception {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+
+        String result = fizzBuzz.process(5);
+
+        assertEquals("Buzz", result);
     }
 }
