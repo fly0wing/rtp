@@ -1,7 +1,7 @@
 package com.jd.jr.adapter02;
 
 
-import com.jd.jr.adapter02.LightAdapter;
+import com.jd.jr.adapter02.adapter.LightAdapter;
 import com.jd.jr.adapter02.equipment.Door;
 import com.jd.jr.adapter02.equipment.Fan;
 import com.jd.jr.adapter02.equipment.Light;
