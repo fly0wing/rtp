@@ -1,6 +1,7 @@
 package com.jd.jr.adapter02;
 
 
+import com.jd.jr.adapter02.HouseKeeper;
 import com.jd.jr.adapter02.equipment.Light;
 import org.junit.Test;
 
