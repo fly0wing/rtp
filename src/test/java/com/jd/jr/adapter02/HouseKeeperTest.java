@@ -46,7 +46,7 @@ public class HouseKeeperTest {
     public void should_turn_off_fan_when_master_left_home() throws Exception {
         Fan fan = new Fan();
         HouseKeeper houseKeeper = new HouseKeeper();
-        houseKeeper.addFan(fan);
+        houseKeeper.addSwitchable(new FanAdapter(fan));
         houseKeeper.masterLeftHome();
 
         assertFalse(fan.isRunning());
