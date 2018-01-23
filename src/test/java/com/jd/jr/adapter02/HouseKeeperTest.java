@@ -1,6 +1,7 @@
 package com.jd.jr.adapter02;
 
 
+import com.jd.jr.adapter02.LightAdapter;
 import com.jd.jr.adapter02.equipment.Door;
 import com.jd.jr.adapter02.equipment.Fan;
 import com.jd.jr.adapter02.equipment.Light;
@@ -14,7 +15,7 @@ public class HouseKeeperTest {
     public void should_turn_on_light_when_master_arrive_at_home() throws Exception {
         Light light = new Light();
         HouseKeeper houseKeeper = new HouseKeeper();
-        houseKeeper.addLight(light);
+        houseKeeper.addSwitchable(new LightAdapter(light));
         houseKeeper.masterArriveAtHome();
 
         assertTrue(light.isOn());
