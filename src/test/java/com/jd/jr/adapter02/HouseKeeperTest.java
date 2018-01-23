@@ -1,7 +1,7 @@
 package com.jd.jr.adapter02;
 
 
-import com.jd.jr.adapter02.HouseKeeper;
+import com.jd.jr.adapter02.equipment.Fan;
 import com.jd.jr.adapter02.equipment.Light;
 import org.junit.Test;
 
@@ -29,4 +29,23 @@ public class HouseKeeperTest {
         assertFalse(light.isOn());
     }
 
+    @Test
+    public void should_turn_on_fan_when_master_arrive_at_home() throws Exception {
+        Fan fan = new Fan();
+        HouseKeeper houseKeeper = new HouseKeeper();
+        houseKeeper.addFan(fan);
+        houseKeeper.masterArriveAtHome();
+
+        assertTrue(fan.isRunning());
+    }
+
+    @Test
+    public void should_turn_off_fan_when_master_left_home() throws Exception {
+        Fan fan = new Fan();
+        HouseKeeper houseKeeper = new HouseKeeper();
+        houseKeeper.addFan(fan);
+        houseKeeper.masterLeftHome();
+
+        assertFalse(fan.isRunning());
+    }
 }
