@@ -1,6 +1,7 @@
 package com.jd.jr.adapter02;
 
 
+import com.jd.jr.adapter02.adapter.DoorAdapter;
 import com.jd.jr.adapter02.adapter.FanAdapter;
 import com.jd.jr.adapter02.adapter.LightAdapter;
 import com.jd.jr.adapter02.equipment.Door;
@@ -56,7 +57,7 @@ public class HouseKeeperTest {
     public void should_open_door_when_master_arrive_at_home() throws Exception {
         Door door = new Door();
         HouseKeeper houseKeeper = new HouseKeeper();
-        houseKeeper.addDoor(door);
+        houseKeeper.addSwitchable(new DoorAdapter(door));
         houseKeeper.masterArriveAtHome();
 
         assertTrue(door.isOpen());
@@ -66,7 +67,7 @@ public class HouseKeeperTest {
     public void should_close_door_when_master_left_home() throws Exception {
         Door door = new Door();
         HouseKeeper houseKeeper = new HouseKeeper();
-        houseKeeper.addDoor(door);
+        houseKeeper.addSwitchable(new DoorAdapter(door));
         houseKeeper.masterLeftHome();
 
         assertFalse(door.isOpen());
