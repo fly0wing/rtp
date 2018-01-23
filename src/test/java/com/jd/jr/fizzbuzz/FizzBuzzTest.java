@@ -2,7 +2,7 @@ package com.jd.jr.fizzbuzz;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 /**
  * @author zhangkai9@jd.com
@@ -68,4 +68,21 @@ public class FizzBuzzTest {
         assertEquals("FizzBuzz", result);
     }
 
+    @Test
+    public void given_1_return_1() throws Exception {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+
+        String result = fizzBuzz.process(1);
+
+        assertEquals("1", result);
+    }
+
+    @Test
+    public void given_17_return_17() throws Exception {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+
+        String result = fizzBuzz.process(17);
+
+        assertEquals("17", result);
+    }
 }
