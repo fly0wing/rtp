@@ -23,7 +23,7 @@ public class HouseKeeper {
         }
     }
 
-    public void addSwitchable(Switchable lightAdapter) {
-        switchables.add(lightAdapter);
+    public void addSwitchable(Switchable switchable) {
+        switchables.add(switchable);
     }
 }
